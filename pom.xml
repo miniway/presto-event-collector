@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>io.airlift</groupId>
+        <artifactId>airbase</artifactId>
+        <version>42</version>
+    </parent>
+
+    <groupId>presto</groupId>
+    <artifactId>presto-event-collector</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+
+    <name>Presto Event Collector</name>
+    <description>Event Collector for Presto</description>
+    <url>http://github.com/miniway/presto-event-collector</url>
+
+    <properties>
+        <air.check.skip-all>true</air.check.skip-all>
+
+        <air.main.basedir>${project.basedir}</air.main.basedir>
+        <main-class>presto.collector.PrestoCollector</main-class>
+        <dep.airlift.version>0.114</dep.airlift.version>
+        <dep.packaging.version>${dep.airlift.version}</dep.packaging.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.airlift</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>${dep.airlift.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.airlift</groupId>
+            <artifactId>discovery</artifactId>
+            <version>${dep.airlift.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.airlift</groupId>
+            <artifactId>http-server</artifactId>
+            <version>${dep.airlift.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.airlift</groupId>
+            <artifactId>jaxrs</artifactId>
+            <version>${dep.airlift.version}</version>
+        </dependency>
+    </dependencies>
+</project>
